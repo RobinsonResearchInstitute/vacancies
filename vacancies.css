@@ -180,7 +180,10 @@ body, html {
 @media only screen and (max-width: 600px) {
 
 .middle{
-   font-size:5vw;
+   padding-left:0;
+  padding-right:0;
+  width:70vw;
+   font-size:1rem;
 }
   
 .gallery{
