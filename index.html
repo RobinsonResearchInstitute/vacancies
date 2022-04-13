@@ -29,166 +29,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="vacancies.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="View Robinson Research Institute's current vacancies.">
 
 
-
-<style>
-
-* {
-    box-sizing: border-box;
-  }
-
-body, html {
-    font-family:  'Roboto','Source Sans Pro','Open Sans','Lato',Helvetica, Arial, sans-serif;
-  /*font-size:100%;*/
-  height: 100%;
-  margin: 0;
-  background-color: rgb(0,71,48);
-}
-
-
-
-.bg {
-  /* The image used */
-  background-image: url("img/ndttool.jpg");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  /* Needed to position the navbar */
-  position: relative;
-
-}
-
-/* Position the navbar container inside the image */
-.container {
-  position: absolute;
-  margin: 8px;
-  width: auto;
-}
-
-/* The navbar */
-.topnav {
-  overflow: hidden;
-  background-color: rgb(0,0,0,0);
-  box-shadow:  0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-}
-
-/* Navbar links */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 0.9rem 1rem;
-  text-decoration: none;
-  /*font-size: 17px;*/
-}
-
-.topnav a:hover {
-  background-color: #333;
-  /*color: black;*/
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color:white;
-  font-size: 2rem;
-  background-color: rgba(0,71,48,0.9);
-  
-  padding-left:1.5vw;
-  padding-right:1.5vw;
-}
-
-
-.gallery{
-    padding-top:3rem;
-    margin-left: auto;
-    margin-right:auto;
-    margin-bottom:1rem;
-    width: 90%;
-    display:grid;
-    /*grid-auto-flow: column;
-    grid-auto-columns: 1fr;*/
-    /*grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    */
-    grid-template-columns: repeat(auto-fit, minmax(60ch, 1fr));
-    gap:1em;
-}
-
-.gallery-item{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    background-color: #f1f1f1;
-    width:100%;
-    color:rgb(0,71,48);
-  border-style:solid;
-  border-color:#f1f1f1;
-  border-width:2px;
-  padding:1rem;
-}
-
-.gallery-item:hover {
-  
-   border-color: rgb(0,71,48);
-}
-
-.gallery-item img, p{
-   display:block;
-   margin-left:auto;
-   margin-right:auto;
-   max-width:90%;
-   margin-top:1rem;
-}
-
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 1rem 2rem;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
-
-
-.button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-@media only screen and (max-width: 600px) {
-
-.middle{
-    padding-left:1rem;
-    padding-right:1rem;
-}
-  
-.gallery{
-    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
-}
-}
-
-
-
-</style>
 </head>
 <body>
 
@@ -204,14 +49,16 @@ body, html {
 
       <div class="middle">
         <h1>JOIN US</h1>
-        <p>Inspirational message goes here.</p>
+        <p>Be part of a collaborative team of scientists and engineers developing sustainable technologies</p>
       </div>
-
+      <div class="downarrow">
+        <a href="#listing"><i class='fa fa-chevron-down' style='font-size:24px;color:white;'></i></a>
+    </div>  
 </div>
 
-
+<a name="listing"></a>
 <div class="gallery">
-
+    
     <div class="gallery-item">
         <h1>Engineer Mechatronics</h1>
         <p>We are seeking a qualified and highly motivated scientist/engineer with ambition to develop their research career within an academic R & D environment. You will work on development of prototype superconducting machines.</p>
@@ -232,11 +79,25 @@ body, html {
 
     <div class="gallery-item">
         <h1>Principal R & D Engineer &#8212 High-Temperature H2 Reactors</h1>
-        <p>The Principal R & D Engineer (Hi-T H2 Reactors) will contribute to the design and development of a novel high-temperature process for hydrogen ironmaking in a major R & D project at the Robinson Research Institute.  Steelmaking is New Zealand’s largest single source of industrial CO2 emissions, but these could ultimately be eliminated through commercialisation of our ‘hydrogen-DRI’ process. Today, we are at the start of our scale-up journey and this role is a key part of this exciting opportunity for change.  As an experienced industrial process engineer in this growing team, you will be working with us to change the future of industrial steelmaking in New Zealand, and around the world. </p>
+        <p>The Principal R & D Engineer (Hi-T H2 Reactors) will contribute to the design and development of a novel high-temperature process for hydrogen ironmaking, in collaboration with New Zealand Steel.</p>
         <button class="button" onclick="window.open('https:\/\/www.seek.co.nz/job/56553697?type=standard#sol=3a64ef34d43f01be7aa5701af9fd68e566c275d8','_blank')">Apply Now <i class="fa fa-external-link-square" aria-hidden="true"></i></button>
     </div>
 
 </div>
+
+<hr/>
+    
+    <div class='caption'>
+        <h1>Want to know more?</h1>
+        <div class="contact">
+            <a href="https://www.linkedin.com/company/robinson-research-institute/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a><br>
+          
+            <i class="material-icons" style="font-size:25px">phone</i> Phone: +64 4 463 0080<br>
+          <a href="mailto:rri-admin@vuw.ac.nz"><i class="material-icons" style="font-size:25px">email</i></a> Email: rri-admin@vuw.ac.nz<br>
+          <a href="https://goo.gl/maps/GHXrWjqYWTeiYarV6" target="_blank"><i class="material-icons" style="font-size:25px">place</i></a> Lower Hutt, NZ
+          
+        </div>
+    </div>
 
 </body>
 </html>
