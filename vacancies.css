@@ -123,6 +123,21 @@ body, html {
    margin-top:1rem;
 }
 
+.gallery-item h1{
+  text-align: center;
+}
+
+.gallery-item h2{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:90%;
+  margin-bottom:0.5rem;
+}
+
+.gallery-item ul{
+  padding-left: 10%;
+}
+
 .button {
   background-color: #4CAF50; /* Green */
   border: none;
