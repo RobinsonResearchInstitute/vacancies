@@ -99,6 +99,16 @@ body, html {
     margin:0;
 }
 
+.controls{
+  color:white;
+  margin-top:3rem;
+  margin-left: auto;
+  margin-right:auto;
+  border: 1px solid white;
+  width:90%;
+}
+
+
 .gallery{
     padding-top:3rem;
     margin-left: auto;
@@ -161,6 +171,15 @@ body, html {
   margin-left:auto;
   margin-right:auto;
   max-width:90%;
+}
+
+.phd h1::before{
+  content:"PhD Scholarship: ";
+}
+
+
+.masters h1::before{
+  content:"Master's Scholarship: ";
 }
 
 .button {
