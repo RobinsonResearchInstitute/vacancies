@@ -63,9 +63,20 @@
   </div>
 
   <a name="listing"></a>
+  
+  <div class="controls">
+    <p>Show: 
+    <input type="radio" id="all" name="filter" value="all" checked>
+  <label for="all">All</label>
+  <input type="radio" id="phd" name="filter" value="phd">
+  <label for="phd">PhD</label>
+  <input type="radio" id="masters" name="filter" value="masters">
+  <label for="masters">Master's</label>
+  </p>
+  </div>
   <div class="gallery">
 
-    <div class="gallery-item">
+    <div class="gallery-item phd">
       <a id="switching"></a>
       <h1>Superconducting switching in oxide heterostructures</h1>
       <p>Novel low-energy switching elements are needed for the next generation of high-performance computing. This
@@ -98,7 +109,7 @@
     </div>
 
 
-    <div class="gallery-item">
+    <div class="gallery-item phd">
       <a id="smes"></a>
       <h1>Energy dissipation in SMES magnet for space applications</h1>
 
@@ -154,7 +165,7 @@
     </div>
 
 
-    <div class="gallery-item">
+    <div class="gallery-item phd">
       <a id="topological"></a>
       <h1>Topological electronic properties of ferromagnetic Heusler alloys</h1>
       <p>Technology built on ferromagnetic thin films gave us the high capacity hard drives that led to the internet and all the huge benefits of modern computing available today. Now, research into magnetic materials is focused on achieving new forms of computing that are ultra-fast and extremely energy-efficient. This materials physics project will build on our recent work controlling the nanoscale magnetic structures and using the quantum electronic properties of ferromagnetic Heusler alloy thin films to understand how to make prototype spintronics memory devices that use topologically interesting electronic states.</p>
@@ -178,7 +189,7 @@
 
 
 
-    <div class="gallery-item">
+    <div class="gallery-item phd">
       <a id="nitrides"></a>
       <h1>Magnetic rare earth nitride thin films with zero quantum angular momentum</h1>
       <p>In this 3-year PhD project, you will carry out experimental magnetic materials research to contribute to our program to develop high-speed, low power magnetic memory for energy-efficient superconducting computing. </p>
@@ -219,7 +230,7 @@
 
 
 
-    <div class="gallery-item">
+    <div class="gallery-item phd">
       <a id="memory"></a>
       <h1>3D fluorescent optical memory for long-term data storage</h1>
       <p>A fully funded PhD scholarship is available for research into developing three-dimensional fluorescent optical memory for long-term data storage and preservation.</p>
@@ -255,7 +266,7 @@
     </div>
 
 
-    <div class="gallery-item">
+    <div class="gallery-item phd">
       <a id="plasma"></a>
       <h1>Plasma generation of hydrogen from water</h1>
       <p>The Materials Team at <a href="https://www.gns.cri.nz/" target="_blank">GNS Science</a> and Paihau-Robinson Research Institute have a new research workstream looking at using atmospheric and water vapour plasma to generate hydrogen. This project will work towards developing prototypes to generate hydrogen from non-pure water, using radiofrequency (RF) plasma. The main challenge will be to control the plasma conditions and its interaction with water to promote the desired hydrogen production reaction, inhibit any competing reactions, and optimise efficiency and throughput. The project will have a strong experimental component with opportunity for modelling.</p>
@@ -285,10 +296,10 @@
     </div>
 
 
-    <div class="gallery-item">
+    <div class="gallery-item phd">
       <a id="co2capture"></a>
-      <h1>Chemical programming of mixed-matrix membranes for CO2 capture</h1>
-      <p>Carbon dioxide (CO<sub>2</sub>) levels are causing a global environmental crisis. Mitigating this crisis will require new effective approaches to reducing CO<sub>2</sub> emissions. Mixed-matrix membranes (MMMs) present an attractive option for CO2 capture. MMMs are made by incorporating a porous filler into a polymer matrix, and they combine the merits of both materials. However, these membranes suffer from several drawbacks, including limited precision in the discrimination of CO<sub>2</sub> from other gases and undesired void spaces due to incompatibilities between the filler and the matrix.</p>
+      <h1>Chemical programming of mixed-matrix membranes for CO<sub>2</sub> capture</h1>
+      <p>Carbon dioxide (CO<sub>2</sub>) levels are causing a global environmental crisis. Mitigating this crisis will require new effective approaches to reducing CO<sub>2</sub> emissions. Mixed-matrix membranes (MMMs) present an attractive option for CO<sub>2</sub> capture. MMMs are made by incorporating a porous filler into a polymer matrix, and they combine the merits of both materials. However, these membranes suffer from several drawbacks, including limited precision in the discrimination of CO<sub>2</sub> from other gases and undesired void spaces due to incompatibilities between the filler and the matrix.</p>
 
 <p>This PhD project will develop new mixed-matrix membranes by incorporating metal-organic framework (MOF) fillers into polymer matrices. The primary focus will be to systematically programme the properties of the MOF fillers to improve the interfacial compatibility and enhance the CO<sub>2</sub> separation performance. In addition to exploring the separation mechanisms at an atomic level, this project will generate new insights to inform the future design of the CO<sub>2</sub> capture membranes.</p>
 
@@ -324,9 +335,9 @@
     </div>
 
  
-  <div class="gallery-item">
+  <div class="gallery-item masters">
     <a id="powertrains"></a>
-    <h1>Master's Scholarship: Hardware testing of electric aircraft powertrains for domestic New Zealand aviation</h1>
+    <h1>Hardware testing of electric aircraft powertrains for domestic New Zealand aviation</h1>
     <p>Paihau-Robinson Research Institute is developing electric motors and powertrain components for large scale electric aircraft. As part of this work it is important to understand how these components behave under real world flight conditions. Your responsibility through this Master’s project is to estimate the requirements of a medium-large scale electric passenger aircraft for use on short haul New Zealand routes.</p>
 
     <p>Prior work at Robinson Research Institute has delivered a Hardware-in-Loop (HiLs) flight simulation system. This system enables aircraft behaviour calculated through flight simulation software to synchronously operate scaled aircraft powertrain hardware. The next step towards accurate estimation of electric aircraft performance is modifying this system to represent full-scale powertrain hardware, and validate these modifications against real world flight data. The completed system will then be used to investigate the technical requirements for successful commercial electric aircraft applications.</p>
@@ -368,5 +379,38 @@
 
 
 </body>
+
+
+<script>
+
+var radios = document.querySelectorAll('input[type=radio][name="filter"]');
+    radios.forEach(radio => radio.addEventListener('change', () => filter(radio.value)));
+
+function filter(term){
+  if(term=='phd'){
+    setVisibility('masters','none');
+    setVisibility('phd','block');
+  }
+  else if(term=='masters'){
+    setVisibility('masters','block');
+    setVisibility('phd','none');
+  }
+  else{
+    setVisibility('masters','block');
+    setVisibility('phd','block');
+  }
+}
+
+   function setVisibility(term,display){
+    let divs = document.getElementsByClassName(term);
+  console.log(divs);
+  for (let x = 0; x < divs.length; x++) {
+     divs[x].style.display=display;
+     
+  }
+  }
+
+  
+</script>
 
 </html>
