@@ -132,7 +132,7 @@ body, html {
    border-color: rgb(0,71,48);
 }
 
-.gallery-item img, p{
+.gallery-item img, p, h2{
    display:block;
    margin-left:auto;
    margin-right:auto;
