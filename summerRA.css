@@ -84,6 +84,10 @@ body, html {
 
 }
 
+.middle a{
+  color:white;
+}
+
 #topics{
     font-size:1.6rem;
     color:white;
