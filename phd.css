@@ -228,6 +228,14 @@ body, html {
       margin-bottom:0.5rem;
       margin-top:0.5rem;
   }
+  
+  .caption p a {
+    color: #4ff255;
+  }
+
+  .caption p a:hover {
+    background-color: rgba(6, 129, 0, 0.673);
+  }
 
 .contact{
     background-color: rgba(0,71,48,0.9);
